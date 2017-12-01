@@ -1,6 +1,6 @@
 """December 1st - http://adventofcode.com/"""
-def captcha(string):
-    """captcha"""
+def captcha_one(string):
+    """captcha one"""
     array = list(string)
     counter = 0
     mysum = 0
@@ -15,6 +15,32 @@ def captcha(string):
             if i == 1:
                 break
     print(mysum)
+
+
+def captcha_two(string):
+    """captcha two"""
+    array = list(string)
+    arrlen = len(array)
+    halfway = int(arrlen/2)
+    counter = 0
+    mysum = 0
+    for i, value in enumerate(array):
+        if (i+halfway) >= arrlen:
+            helper = i+halfway - arrlen
+            if value == array[helper]:
+                mysum += int(value)
+        else:
+            if value == array[i+halfway]:
+                mysum += int(value)
+        if counter < 1:
+            if i == len(array):
+                counter += 1
+                i = 0
+        else:
+            if i == 1:
+                break
+    print(mysum)
+
 
 MY_STRING = """428122498997587283996116951397957933569136949848\
 37941712536253226986946118574311373399233137985644636248212964\
@@ -51,4 +77,6 @@ MY_STRING = """428122498997587283996116951397957933569136949848\
 89444215165691811785179157456252951586116363652539484557276536\
 72922299582352766484"""
 
-captcha(MY_STRING)
+captcha_one(MY_STRING)
+
+captcha_two(MY_STRING)
