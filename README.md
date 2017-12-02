@@ -6,3 +6,7 @@ I'll try to solve the puzzles daily and push it up here.
 ## Day 1: Inverse Captcha
 
 Got it right! A little more Code than others, but at least it works ;)
+
+## Day 2: Corruption Checksum
+
+It works fine, maybe a little more code than really needed - especially compared to [this guy](https://github.com/kodsnack/advent_of_code_2017/blob/master/erikdyrelius-python3/Day02.py)
