@@ -1,6 +1,6 @@
 """December 4th - http://adventofcode.com/"""
 
-lines = open('fourth.txt', 'r')
+lines = open('inputs/fourth.txt', 'r')
 
 MY_TEST = """aaa bbb ccc aa dd
 aa bb cc aa
