@@ -26,3 +26,8 @@ But at least i got to know a real quick and awesome way to solve it.
 
 Finally something for me again ;)
 Pretty easy to solve in Python, or any other language i guess.
+
+## Day 6: Memory Reallocation
+
+That was a really, really nice task to do.
+Not very difficult but with a lot of posibillities to write mistakes.
