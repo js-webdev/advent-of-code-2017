@@ -21,3 +21,13 @@ For part 2 I just looked it up on [OEIS](https://oeis.org/A141481)
 Seemed pretty easy at first sight, but it turned out to be not as easy in a new Language :D
 In the end I started looking up stuff on GitHub from other folks who did it in Python and copied it.
 But at least i got to know a real quick and awesome way to solve it.
+
+## Day 5: A Maze of Twisty Trampolines, All Alike
+
+Finally something for me again ;)
+Pretty easy to solve in Python, or any other language i guess.
+
+## Day 6: Memory Reallocation
+
+That was a really, really nice task to do.
+Not very difficult but with a lot of posibillities to write mistakes.
