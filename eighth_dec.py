@@ -9,19 +9,21 @@ c inc -20 if c == 10"""
 MY_INPUT  = open("inputs/eighth.txt","r").read()
 regs = dict()
 
+highest_val = 0
+
 def part1(input_string):
+    highest_val = 0
     for line in input_string.splitlines():
         groups = re.findall(r"(\w+) (inc|dec) (-?[\d]+) if (\w+) ([!=<>]+) (-?[\d]+)", line)[0]
-        print(groups)
         if groups[3] not in regs:
             regs[groups[3]] = 0
         if condition(regs[groups[3]], groups[4], groups[5]) == True:
             if groups[0] not in regs:
                 regs[groups[0]] = 0
             regs[groups[0]] = instruction(groups[1], regs[groups[0]], groups[2])
-        print(groups)
-
-    return 1
+            if regs[groups[0]] > highest_val:
+                highest_val = regs[groups[0]]
+    return highest_val
 
 def instruction(inst, var, val):
     if inst == "dec":
@@ -44,6 +46,7 @@ def condition(var, op, val):
     elif op == "!=":
         return int(var) != int(val)
 
-part1(MY_INPUT)
-print(regs[max(regs, key=lambda i: regs[i])])
+highest_val = part1(MY_INPUT)
+print("Part 1: "+str(regs[max(regs, key=lambda i: regs[i])]))
+print("Part 2: " + str(highest_val))
 sys.exit(0)
